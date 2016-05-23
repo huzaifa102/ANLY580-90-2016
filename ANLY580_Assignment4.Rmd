@@ -90,6 +90,26 @@ ggplot(data = db3, aes(Region,Rate))+
 ```
 
 ## Muhammad	Huzaifa
+The wordcloud library will provide the wordcloud function to which one can pass arguments.For a simple illustration:
+
+Let x be the collection of words and g  is the collection of corresponding frequencies of those words.
+
+To understand which word is occurring most frequently let us draw the word cloud.
+
+The size of the word is proportional to the frequency of the word.
+```{r, echo=TRUE}
+library(wordcloud)
+x<-c("data","stats","Sentiment","Analysis","Social","Networking","Visualize",
+"Big data","Graphics","Maths","Algorithms","Machine", "Learning","Classification",
+"Clustering","Grouping","Mining","Text")
+
+g<-c( 78,  40, 172 ,147, 213, 101, 217,  29, 149, 174, 213, 166, 265 ,215,56, 109,80,   260)
+
+wordcloud(x,g,scale=c(4,1),Inf,random.order=FALSE)
+
+```
+
+
 ## Xinyi	Li
 
 This package offers an alternative. The data.tree package lets you create hierarchies, called data.tree structures. The building block of theses structures are Node objects. The package provides basic traversal, search, and sort operations, and an infrastructure for recursive tree programming. You can decorate Nodes with your own fields and methods, so as to extend the package to your needs.
